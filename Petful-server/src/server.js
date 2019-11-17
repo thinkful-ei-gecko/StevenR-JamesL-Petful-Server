@@ -8,7 +8,6 @@ const usersRoute = require('./routes/users/usersRoute');
 
 const app = express();
 app.use(cors());
-
 app.use('/api/cat', catsRoute);
 app.use('/api/dog', dogsRoute);
 app.use('/api/users', usersRoute);
@@ -30,6 +29,6 @@ app.use(function (err, req, res, next) {
   });
 });
 
-app.listen(8080,()=>{
+app.listen(8000,()=>{
   console.log(`Serving on ${PORT}`);
 });

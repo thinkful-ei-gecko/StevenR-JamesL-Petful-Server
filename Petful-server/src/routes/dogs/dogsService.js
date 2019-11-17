@@ -8,7 +8,7 @@ const dogsService = {
     };
     let curr = dogQueue.first;
     let dogs = [];
-    while(curr) {
+    while(curr.next !== null) {
       dogs.push(curr.value);
       curr = curr.next;
     };

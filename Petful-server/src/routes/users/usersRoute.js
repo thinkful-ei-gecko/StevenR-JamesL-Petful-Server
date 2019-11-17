@@ -9,8 +9,8 @@ usersRoute
     res.status(200).send(users)
   })
   .delete((req, res, next) => {
-    const user = usersService.dequeueUsers();
-    if(user == undefined) {
+    const user = usersService.dequeueUser();
+    if(user === undefined) {
       res.status(400).send({ message: 'Could not find user to remove' });
     }
     res.status(200).send(user);

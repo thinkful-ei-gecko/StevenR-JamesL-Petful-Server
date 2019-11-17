@@ -42,7 +42,7 @@ const dogs = [
 ]
 
 function requeueDogs(queue) {
-  for(let i=0; i<dogs.length; i++) {
+  for(let i=0; i<=dogs.length; i++) {
     queue.enqueue(dogs[i])
   }
 }
@@ -53,13 +53,13 @@ function _resetDogs() {
     dogQueue.dequeue()
     currNode = currNode.next
   }
-  for(let i=0; i<dogs.length; i++) {
+  for(let i=0; i<=dogs.length; i++) {
     dogQueue.enqueue(dogs[i])
   }
 }
 
 //initial queue of dogs
-for(let i=0; i<dogs.length; i++) {
+for(let i=0; i<=dogs.length; i++) {
   dogQueue.enqueue(dogs[i])
 }
 

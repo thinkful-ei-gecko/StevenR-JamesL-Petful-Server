@@ -42,7 +42,7 @@ const cats = [
 ]
 
 function requeueCats(queue) {
-  for(let i=0; i<cats.length; i++) {
+  for(let i=0; i<=cats.length; i++) {
     queue.enqueue(cats[i])
   }
 }
@@ -53,13 +53,13 @@ function _resetCats() {
     catQueue.dequeue()
     currNode = currNode.next
   }
-  for(let i=0; i<cats.length; i++) {
+  for(let i=0; i<=cats.length; i++) {
     catQueue.enqueue(cats[i])
   }
 }
 
 //initial queue of cats
-for(let i=0; i<cats.length; i++) {
+for(let i=0; i<=cats.length; i++) {
   catQueue.enqueue(cats[i])
 }
 
